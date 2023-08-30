@@ -1,0 +1,19 @@
+ <div class="menu-container">
+      <div class="card-header col-md-10">
+      <h2>
+        &#127869 Current Menu
+      </h2>
+      </div>
+      <div>
+        <ol>
+          {{#each dishes}}
+            <li>
+              <a href="/dish/{{this.slug}}">
+                {{this.dish_name}}
+              </a>
+            </li>
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+  </div>
