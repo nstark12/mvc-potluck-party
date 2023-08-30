@@ -34,6 +34,11 @@ Dish.init(
     },
   },
   {
+    hooks: {
+      beforeCreate: function (dish) {
+        dish.slug = dish.dish_name.split(' ').join('-').toLowerCase()
+      }
+    },
     sequelize,
     freezeTableName: true,
     underscored: true,

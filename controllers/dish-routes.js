@@ -24,4 +24,20 @@ router.get('/dish/:slug', async (req, res) => {
   res.render('dish', dish)
 })
 
+router.get('/add-dish', (req, res) => {
+  res.render('add-dish')
+})
+
+router.post('/api/add-dish', async (req, res) => {
+  try {
+    const newDish = await Dish.create(req.body)
+
+    res.json(newDish)
+  } catch(err) {
+    console.log(err)
+    res.status(500).json(err)
+  }
+  
+})
+
 module.exports = router;

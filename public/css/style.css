@@ -45,6 +45,17 @@
     display: flex;
     background-color: var(--secondary);
   }
+
+  header a {
+    color: white;
+  }
+
+  label,
+  input,
+  textarea {
+    display: block;
+  }
+
   
   .menu-container {
     display: flex;
